@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowtranslate | Dolia Cats</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <section class="translate-section">
+        <h1>Meow Translate</h1>
+        <h2>Translate whatever you want to meow language and vice versa</h2>
+        <div class="translator-container">
+            <form class="translate-form" action="">
+                <div>
+                    <div class="options-container">
+                        <label for="from_languages">From</label>
+
+                        <select id="from_languages">
+                            <option value="Meow">Meow</option>
+                            <option value="English">English</option>
+                        </select>
+                    </div>
+                    <textarea class="translate-textarea" name="from" id="from-textarea" cols="60" rows="20"></textarea>
+                </div>
+                <div class="swap-container">
+                    <button class="swap-button">swap</button>
+                </div>
+                <div>
+                    <div class="options-container">
+                        <label for="from_languages">To</label>
+
+                        <select id="from_languages">
+                            <option value="Meow">Meow</option>
+                            <option value="English">English</option>
+                        </select>
+                    </div>
+                    <textarea class="translate-textarea" name="to" id="to-textarea" cols="60" rows="20"></textarea>
+                </div>
+
+            </form>
+            <input type="text" class="test">
+            <button class="translate-button">Translete</button>
+        </div>
+    </section>
+    
+
+    <input id="elem1" type="text" name="quantity" placeholder="Количество">
+    <input id="butt" type="button" value="Кнопка" /><br><br>
+    <div id="str"></div>
+</body>
+<script src="./main.js"></script>
+</html>

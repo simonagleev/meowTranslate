@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.translate-section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+textarea {
+    resize: none;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.swap-container {
+    display: flex;
+    align-items: center;
+}
