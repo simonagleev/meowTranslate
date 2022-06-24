@@ -34,6 +34,11 @@ form {
     justify-content: space-between;
 }
 
+.result {
+    width: 459px;
+    height: 302px;
+    border: 1px solid #000;
+}
 
 
 
@@ -43,3 +48,4 @@ form {
     display: flex;
     align-items: center;
 }
+

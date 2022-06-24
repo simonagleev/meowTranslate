@@ -1,0 +1,20 @@
+{
+  "name": "meowtranslate",
+  "version": "1.0.0",
+  "description": "A translator from\\to meow language for Dolia Cats website",
+  "main": "main.js",
+  "scripts": {
+    "test": "testcommand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonagleev/meowTranslate.git"
+  },
+  "author": "Simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonagleev/meowTranslate/issues"
+  },
+  "homepage": "https://github.com/simonagleev/meowTranslate#readme",
+  "type": "module"
+}
