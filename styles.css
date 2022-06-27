@@ -49,13 +49,15 @@ h2 {
 
 .box-container{
     width: 47%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 textarea {
     resize: none;
 }
-
 
 form {
     display: flex;
@@ -68,21 +70,29 @@ form {
     padding: 10px;
     background-color: #F5F5F5;
     border: 1px solid #000;
-    border-radius: 2px;
+    border-radius: 10px;
     color: #000;
     word-break: break-all;
     text-align: left;
 }
 
-
-
-.swap-container {
-    display: flex;
-    align-items: center;
+.fromLanguage {
+    padding: 10px 0;
+    font-weight: 700;
+    background-color: #337ab7;
+    border-radius: 30px;
+    width: 40%;
+    margin: 10px auto;
 }
 
-
-
+.toLanguage {
+    padding: 10px 0;
+    font-weight: 700;
+    background-color: #337ab7;
+    border-radius: 30px;
+    width: 40%;
+    margin: 10px auto;
+}
 
 .btn-hover {
     width: 50%;
@@ -119,3 +129,4 @@ form {
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
+

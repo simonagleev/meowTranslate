@@ -4,6 +4,8 @@ const fromTextarea = document.querySelector('#from-textarea');
 const toTextarea = document.querySelector('#to-textarea');
 const translateBtn = document.querySelector('.translate-button');
 const swapBtn = document.querySelector('.swap-button');
+const toLanguage = document.querySelector('.toLanguage');
+const fromLanguage = document.querySelector('.fromLanguage');
 
 const alphabet = {
     A: "meow",
@@ -163,24 +165,24 @@ const isMeowLanguage = (message) => {
 };
 
 
-
-
-
-
 translateBtn.addEventListener('click', function () {
     toTextarea.innerHTML = '';
     const fromValue = fromTextarea.value;
     console.log(isMeowLanguage(fromValue))
     if (isMeowLanguage(fromValue)) {
+        fromLanguage.innerHTML = 'Meow'
+        toLanguage.innerHTML = 'English'
         console.log(1)
         toTextarea.innerHTML = reverseTranslate(fromValue)
     } else if (isMeowLanguage(fromValue) === false) {
+        fromLanguage.innerHTML = 'English'
+        toLanguage.innerHTML = 'Meow'
         console.log(2)
         toTextarea.innerHTML = toMeowphabet(fromValue)
     } else {
         console.log(3)
     }
-
+    
 })
 
 
