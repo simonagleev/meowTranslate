@@ -79,7 +79,7 @@ form {
 .fromLanguage {
     padding: 10px 0;
     font-weight: 700;
-    background-color: #337ab7;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876);
     border-radius: 30px;
     width: 40%;
     margin: 10px auto;
@@ -88,7 +88,7 @@ form {
 .toLanguage {
     padding: 10px 0;
     font-weight: 700;
-    background-color: #337ab7;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876);
     border-radius: 30px;
     width: 40%;
     margin: 10px auto;

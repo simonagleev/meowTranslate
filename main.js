@@ -185,4 +185,25 @@ translateBtn.addEventListener('click', function () {
     
 })
 
+const textArea = document.querySelector('#from-textarea')
+
+textArea.addEventListener("keyup", ({key}) => {
+    if (key === "Enter") {
+        toTextarea.innerHTML = '';
+        const fromValue = fromTextarea.value;
+        
+        if (isMeowLanguage(fromValue)) {
+            fromLanguage.innerHTML = 'Meow'
+            toLanguage.innerHTML = 'English'
+            toTextarea.innerHTML = reverseTranslate(fromValue)
+        } else if (isMeowLanguage(fromValue) === false) {
+            fromLanguage.innerHTML = 'English'
+            toLanguage.innerHTML = 'Meow'
+            
+            toTextarea.innerHTML = toMeowphabet(fromValue)
+        } else {
+           
+        }
+    }
+})
 
