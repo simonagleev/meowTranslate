@@ -169,16 +169,16 @@ translateBtn.addEventListener('click', function () {
     toTextarea.innerHTML = '';
     const fromValue = fromTextarea.value;
     console.log(isMeowLanguage(fromValue))
-    if (isMeowLanguage(fromValue)) {
+    if (isMeowLanguage(fromTextarea.value)) {
         fromLanguage.innerHTML = 'Meow'
         toLanguage.innerHTML = 'English'
         console.log(1)
-        toTextarea.innerHTML = reverseTranslate(fromValue)
-    } else if (isMeowLanguage(fromValue) === false) {
+        toTextarea.innerHTML = reverseTranslate(fromTextarea.value)
+    } else if (isMeowLanguage(fromTextarea.value) === false) {
         fromLanguage.innerHTML = 'English'
         toLanguage.innerHTML = 'Meow'
         console.log(2)
-        toTextarea.innerHTML = toMeowphabet(fromValue)
+        toTextarea.innerHTML = toMeowphabet(fromTextarea.value)
     } else {
         console.log(3)
     }
@@ -192,15 +192,14 @@ textArea.addEventListener("keyup", ({key}) => {
         toTextarea.innerHTML = '';
         const fromValue = fromTextarea.value;
         
-        if (isMeowLanguage(fromValue)) {
+        if (isMeowLanguage(fromTextarea.value)) {
             fromLanguage.innerHTML = 'Meow'
             toLanguage.innerHTML = 'English'
-            toTextarea.innerHTML = reverseTranslate(fromValue)
-        } else if (isMeowLanguage(fromValue) === false) {
+            toTextarea.innerHTML = reverseTranslate(fromTextarea.value)
+        } else if (isMeowLanguage(fromTextarea.value) === false) {
             fromLanguage.innerHTML = 'English'
             toLanguage.innerHTML = 'Meow'
-            
-            toTextarea.innerHTML = toMeowphabet(fromValue)
+            toTextarea.innerHTML = toMeowphabet(fromTextarea.value)
         } else {
            
         }
