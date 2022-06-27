@@ -167,12 +167,20 @@ const isMeowLanguage = (message) => {
 
 
 
-translateBtn.addEventListener('click', function() {
-    const fromValue = fromTextarea.value; 
-    let toValue =toTextarea.innerHTML;
-    console.log(toTextarea)
-    toTextarea.innerHTML = translateToMeow(fromValue)
-    console.log();
+translateBtn.addEventListener('click', function () {
+    toTextarea.innerHTML = '';
+    const fromValue = fromTextarea.value;
+    console.log(isMeowLanguage(fromValue))
+    if (isMeowLanguage(fromValue)) {
+        console.log(1)
+        toTextarea.innerHTML = reverseTranslate(fromValue)
+    } else if (isMeowLanguage(fromValue) === false) {
+        console.log(2)
+        toTextarea.innerHTML = toMeowphabet(fromValue)
+    } else {
+        console.log(3)
+    }
+
 })
 
 
