@@ -21,7 +21,8 @@ body {
     width: 100%;
     margin: 0 auto;
     background: #0E1A54;
-    color: #26FBFF;
+    /* color: #26FBFF; */
+    color: #fff;
     font-size: 16px;
 
 }
