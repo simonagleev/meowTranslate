@@ -36,7 +36,7 @@ const alphabet = {
     S: "mE",
 };
 
-const symbols = new Set(`!@#$%^&*()_+=-~{[]};:'"\`\\|,<.>/?1234567890`.split(''));
+const symbols = new Set(`!@#$%^&*()_+=-~{[]};:'"\`\\|,<.>/?1234567890\r\n \n`.split(''));
 
 const lettersAllowed = new Set(`mMwWeEoOFfuUrR`.split(''))
 
@@ -166,19 +166,19 @@ const isMeowLanguage = (message) => {
 
 
 translateBtn.addEventListener('click', function () {
+    console.log(fromTextarea.value)
+    console.log(fromTextarea.value.length)
     toTextarea.innerHTML = '';
-    const fromValue = fromTextarea.value;
-    console.log(isMeowLanguage(fromValue))
-    if (isMeowLanguage(fromTextarea.value)) {
+    if (isMeowLanguage(fromTextarea.value.trim())) {
         fromLanguage.innerHTML = 'Meow'
         toLanguage.innerHTML = 'English'
         console.log(1)
-        toTextarea.innerHTML = reverseTranslate(fromTextarea.value)
-    } else if (isMeowLanguage(fromTextarea.value) === false) {
+        toTextarea.innerHTML = reverseTranslate(fromTextarea.value.trim())
+    } else if (isMeowLanguage(fromTextarea.value.trim()) === false) {
         fromLanguage.innerHTML = 'English'
         toLanguage.innerHTML = 'Meow'
         console.log(2)
-        toTextarea.innerHTML = toMeowphabet(fromTextarea.value)
+        toTextarea.innerHTML = toMeowphabet(fromTextarea.value.trim())
     } else {
         console.log(3)
     }
@@ -188,18 +188,19 @@ translateBtn.addEventListener('click', function () {
 const textArea = document.querySelector('#from-textarea')
 
 textArea.addEventListener("keyup", ({key}) => {
+    
     if (key === "Enter") {
+        console.log(fromTextarea.value)
+        console.log(fromTextarea.value.length + 'second')
         toTextarea.innerHTML = '';
-        const fromValue = fromTextarea.value;
-        
-        if (isMeowLanguage(fromTextarea.value)) {
+        if (isMeowLanguage(fromTextarea.value.trim())) {
             fromLanguage.innerHTML = 'Meow'
             toLanguage.innerHTML = 'English'
-            toTextarea.innerHTML = reverseTranslate(fromTextarea.value)
-        } else if (isMeowLanguage(fromTextarea.value) === false) {
+            toTextarea.innerHTML = reverseTranslate(fromTextarea.value.trim())
+        } else if (isMeowLanguage(fromTextarea.value.trim()) === false) {
             fromLanguage.innerHTML = 'English'
             toLanguage.innerHTML = 'Meow'
-            toTextarea.innerHTML = toMeowphabet(fromTextarea.value)
+            toTextarea.innerHTML = toMeowphabet(fromTextarea.value.trim())
         } else {
            
         }
